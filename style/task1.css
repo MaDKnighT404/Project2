@@ -1,0 +1,63 @@
+/* обнуление */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f6f9f9;
+  font-family: "Economica", "Lato", Helvetica, sans-serif;
+  font-family: "Open Sans", "Lato", Helvetica, sans-serif;
+  color: black;
+  margin: 1em;
+  padding: 0;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text h1 {
+  color: #2d3950;
+  margin-bottom: 0.3em;
+}
+
+.text p {
+  color: #909090;
+  margin-bottom: 2em;
+}
+
+.wrapper {
+  border: 1px solid red;
+
+}
+
+.picture1 {
+  background: url(..//pic/1.jpg) no-repeat;
+    background-size: 100%;
+    width: 500px;
+    height: 500px;
+}
+
+
+
+
+/* .picture:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -15%;
+  left: -20%;
+  background: red;
+  opacity: 0.5;
+} */
+
