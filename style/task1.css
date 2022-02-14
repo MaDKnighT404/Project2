@@ -1,12 +1,3 @@
-/* обнуление */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
 html,
 body {
   background: #f6f9f9;
@@ -14,7 +5,6 @@ body {
   font-family: "Open Sans", "Lato", Helvetica, sans-serif;
   color: black;
   margin: 1em;
-  padding: 0;
 }
 
 .text {
@@ -35,29 +25,99 @@ body {
 }
 
 .wrapper {
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
 
+.conteiner__pic {
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 270px;
 }
 
 .picture1 {
   background: url(..//pic/1.jpg) no-repeat;
-    background-size: 100%;
-    width: 500px;
-    height: 500px;
+  background-size: cover;
 }
 
+.picture2 {
+  background: url(..//pic/2.jpg) no-repeat;
+  background-size: cover;
+}
 
+.picture3 {
+  background: url(..//pic/3.jpg) no-repeat;
+  background-size: cover;
+}
 
+.picture4 {
+  background: url(..//pic/4.jpg) no-repeat;
+  background-size: cover;
+}
 
-/* .picture:hover::after {
-  content: "";
+.picture5 {
+  background: url(..//pic/5.jpg) no-repeat;
+  background-size: cover;
+}
+
+.picture6 {
+  background: url(..//pic/6.jpg) no-repeat;
+  background-size: cover;
+}
+
+[class*="picture"] {
+  position: relative;
+  width: 470px;
+  height: 270px;
+  margin: 10px;
+}
+
+.buttons_wrapper {
+  position: absolute;
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -15%;
-  left: -20%;
-  background: red;
-  opacity: 0.5;
-} */
+  top: 0;
+  left: 0;
+  background: rgba(43, 122, 250, 0.5);
+  display: none;
+}
 
+.button1 {
+  position: absolute;
+  background-image: url("..//pic/button1.png");
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid white;
+  height: 41px;
+  width: 41px;
+  top:40%;
+  left:45%;
+  transition: 0.3s;
+  opacity: 0.85;
+}
+
+.button2 {
+  position: absolute;
+  background-image: url("..//pic/button2.png");
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid white;
+  height: 41px;
+  width: 41px;
+  top:40%;
+  left:55%;
+  transition: 0.3s;
+  opacity: 0.85;
+}
+
+[class*="picture"]:hover .buttons_wrapper {
+  display: block;
+}
+
+.button1:hover,
+.button2:hover {
+  opacity: 1;
+}
